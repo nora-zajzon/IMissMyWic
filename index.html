@@ -1,1 +1,189 @@
-
+<!DOCTYPE html>
+<!-- The HTML document declaration -->
+<html lang="en">
+    <head>
+        <!-- Meta tags for character set, description, and viewport settings -->
+        <meta charset="UTF-8">
+        <meta name="description" content="Welcome to the cozy world of I Miss My Cafe.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Title of the page -->
+        <title>I Miss My Cafe</title>
+        
+        <!-- Link to external stylesheet -->
+        <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+    </head>
+    <body>
+        <header>
+            <!-- Heading 1 for main title -->
+            <h1>I Miss My Cafe</h1>
+            
+            <!-- Navigation section -->
+            <nav>
+                <ul>
+                    <!-- List items for navigation links -->
+                    <li class="current-page"><a href="index.html">Home</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <!-- Heading 2 for section title -->
+            <h2>About Us</h2>
+            
+            <!-- Details section with a code snippet -->
+            <details>
+                <summary><code>print("Welcome to My Cafe!")</code></summary>
+                If this is your first time here, please read and share the warmth!
+            </details>
+            
+            <!-- Paragraph with bold and span highlighting -->
+            <p>Our cafe is a place for <b>good coffee</b> and <span class="highlight">warm conversations</span>. Feel free to <i>savor, enjoy, and relax</i> in our cozy atmosphere. Open since <b>today</b>.</p>
+            
+            <!-- Image of the cafe -->
+            <figure>
+                <img src="cafe.jpeg" alt="Picture of Our Cafe" width="200">
+                <figcaption>Fig 1. Welcome to our cozy cafe.</figcaption>
+            </figure>
+            
+            <!-- Heading 2 for section title -->
+            <h2>Specialties</h2>
+            
+            <!-- Aside section with information about the cafe -->
+            <aside>
+                <p>Curious about our menu?</p>
+                <!-- Picture element for responsive images -->
+                <picture>
+                    <source srcset="menu.jpeg" type="image/jpeg" width="100">
+                    <source srcset="menu2.jpeg" type="image/jpg" width="100">
+                    <img src="menu3.jpeg" alt="Cafe Menu" width="100">
+                </picture>
+                <br>
+                <!-- Embedded iframe for quick access to a website  -->
+                <iframe src="https://wic.ucsd.edu/" title="WIC Website" width="500" height=500></iframe>
+            </aside>
+            
+            <!-- Heading 3 for subsection title -->
+            <h3>Contact Us</h3>
+            
+            <!-- Unordered list with cafe contact information -->
+            <ul>
+                <li>Email: <a href="mailto:info@ourcafe.com">info@ourcafe.com</a></li>
+                <li>Phone: +1 (123) 456-7890</li>
+                <li>Visit us at: 123 Cafe Street, Cityville</li>
+            </ul>
+            
+            <!-- Form section for connecting with the cafe -->
+            <form>
+                <!-- Fieldset with legend for grouping form elements -->
+                <fieldset>
+                    <legend>Connect with Us!</legend>
+                    
+                    <!-- Radio buttons for selecting user type -->
+                    <label>Select your role:</label>
+                    <input type="radio" id="customer" name="role">
+                    <label for="customer">Customer</label>
+                    <input type="radio" id="supplier" name="role">
+                    <label for="supplier">Supplier</label>
+                    
+                    <br>
+                    
+                    <!-- Dropdown for selecting favorite beverage -->
+                    <label for="beverage">Select your favorite beverage:</label>
+                    <select id="beverage">
+                        <option value="coffee">Coffee</option>
+                        <option value="tea">Tea</option>
+                        <option value="smoothie">Smoothie</option>
+                        <option value="other">Other</option>
+                    </select>
+                    
+                    <br>
+                    
+                    <!-- Textarea for additional comments -->
+                    <label for="comments">Share your thoughts:</label>
+                    <textarea id="comments" placeholder="Your comments here..."></textarea>
+                    
+                    <br>
+                    
+                    <!-- Submit button -->
+                    <button type="submit">Submit</button>
+                </fieldset>
+            </form>
+            
+            <!-- Table section for showcasing cafe skills -->
+            <table>
+                <caption>Our Expertise</caption>
+                <colgroup>
+                    <col style="background-color: lightgray;">
+                    <col style="background-color: lightblue;">
+                </colgroup>
+                <tr>
+                    <th>Category</th>
+                    <th>Level</th>
+                </tr>
+                <tr>
+                    <td>Coffee Brewing</td>
+                    <td>Expert</td>
+                </tr>
+                <tr>
+                    <td>Bakery</td>
+                    <td>Intermediate</td>
+                </tr>
+                <tr>
+                    <td>Culinary Arts</td>
+                    <td>Advanced</td>
+                </tr>
+            </table>
+            
+            <!-- Code snippet using pre tag -->
+            <pre>
+                console.log("Enjoying the aroma of freshly brewed coffee!");
+            </pre>
+            
+            <!-- Audio and video elements for ambiance -->
+            <audio controls>
+                <source src="sample-audio.mp3" type="audio/mp3">
+            </audio>
+            <br>
+            <video controls>
+                <source src="sample-video.mp4" type="video/mp4">
+            </video>
+            
+            <!-- Drawing section with canvas and SVG -->
+            <div class="drawing">
+                <script>
+                    // JavaScript code for drawing on canvas
+                    window.addEventListener('load', function() {
+                        let canvas = document.getElementById('canvas');
+                        let context = canvas.getContext('2d');
+                        context.beginPath();
+                        context.moveTo(10, 50);
+                        context.lineTo(300, 200); 
+                        context.strokeStyle = 'brown';
+                        context.lineWidth = 10; 
+                        context.stroke(); 
+                        context.beginPath();
+                        context.arc(300, 150, 50, 0, Math.PI * 2, true);
+                        context.strokeStyle = 'green';
+                        context.lineWidth = 3;
+                        context.fillStyle = 'rgba(255,165,30,0.4)';
+                        context.fill();
+                        context.stroke();
+                    });
+                </script>
+                <!-- Canvas element for drawing -->
+                <canvas id="canvas" width="400" height="400" >
+                    <p>Canvas Supporting Browser Required</p> 
+                </canvas>
+                
+                <!-- SVG element for additional drawing -->
+                <svg height="100" width="100%">
+                    <circle cx="50" cy="50" r="25" fill="brown" stroke="purple" stroke-width="2"/>
+                </svg>
+            </div>
+        </main>
+        <footer>
+            <p>Made with &hearts; by WIC</p>
+        </footer>
+    </body>
+</html>
