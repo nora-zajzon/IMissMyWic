@@ -1,29 +1,17 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Get the select element
-    var selectGenre = document.getElementById('genre');
+    // Get the form element
+    var form = document.getElementById('djForm');
 
-    // Add event listener for change
-    selectGenre.addEventListener('change', function() {
-        // Get the selected value
-        var selectedGenre = selectGenre.value;
+    // Add event listener for form submission
+    form.addEventListener('submit', function(event) {
+        // Prevent default form submission
+        event.preventDefault();
 
-        // Check if the selected value matches the desired option
-        if (selectedGenre === 'house') {
-            // Play the sound for house genre
-            playSound('house-sound.mp3');
-        } else if (selectedGenre === 'rap') {
-            // Play the sound for rap genre
-            playSound('rap-sound.mp3');
-        } else if (selectedGenre === 'pop') {
-            // Play the sound for pop genre
-            playSound('pop-sound.mp3');
-        } else if (selectedGenre === 'indie') {
-            // Play the sound for indie genre
-            playSound('indie-sound.mp3');
-        } else if (selectedGenre === 'EDM') {
-            // Play the sound for EDM genre
-            playSound('edm-sound.mp3');
-        }
+        // Get the selected genre
+        var selectedGenre = document.getElementById('genre').value;
+
+        // Play the sound based on the selected genre
+        playSound(selectedGenre + '.mp3');
     });
 
     // Function to play the sound
