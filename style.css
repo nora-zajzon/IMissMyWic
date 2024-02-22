@@ -61,7 +61,9 @@ th {
 
 /* Form styles */
 form {
+    background-color: rgba(0, 0, 0, 0.75); /* Background color for the form */
     margin-bottom: 1rem;
+    padding: 1rem; /* Added padding for better appearance */
 }
 
 label {
