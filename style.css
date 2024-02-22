@@ -17,7 +17,7 @@ body {
 
 /* Header styles */
 header {
-    background-color: #333;
+    background-color: #000000;
     color: #fff;
     text-align: center;
     padding: 1rem;
@@ -56,7 +56,7 @@ th, td {
 }
 
 th {
-    background-color: #333;
+    background-color: #000000;
     color: #fff;
 }
 
@@ -77,19 +77,19 @@ select, button {
 }
 
 button {
-    background-color: #333;
+    background-color: #4e4e4e;
     color: #fff;
     border: none;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #555;
+    background-color: #000000;
 }
 
 /* Footer styles */
 footer {
-    background-color: #333;
+    background-color: #000000;
     color: #fff;
     text-align: center;
     padding: 1rem;
@@ -101,7 +101,7 @@ caption {
     font-weight: bold;
     text-align: center;
     padding: 0.5rem;
-    background-color: #333;
+    background-color: #000000;
     color: #fff;
 }
 
