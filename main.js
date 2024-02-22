@@ -2,11 +2,44 @@ document.addEventListener('DOMContentLoaded', function() {
     // Variable to store reference to the currently playing audio
     var currentAudio = null;
 
-    // Get the form element
-    var form = document.getElementById('djForm');
+    // Function to play the sound
+    function playSound(soundFile) {
+        // If there's an existing audio element, stop and reset it
+        if (currentAudio) {
+            currentAudio.pause();
+            currentAudio.currentTime = 0;
+        } else {
+            // Create a new audio element
+            currentAudio = new Audio();
+        }
 
-    // Add event listener for form submission
-    form.addEventListener('submit', function(event) {
+        // Set the audio source
+        currentAudio.src = soundFile;
+
+        // Play the audio
+        currentAudio.play();
+    }
+
+    // Function to stop the currently playing audio
+    function stopMusic() {
+        if (currentAudio) {
+            currentAudio.pause();
+            currentAudio.currentTime = 0;
+            // Remove the audio source to prevent any further play
+            currentAudio.src = "";
+            // Help with garbage collection by nullifying the reference
+            currentAudio = null;
+        }
+    }
+
+    // Get the submit button element
+    var submitButton = document.getElementById('submit');
+
+    // Add event listener for submit button click
+    submitButton.addEventListener('click', submitForm);
+
+    // Function to handle form submission
+    function submitForm(event) {
         // Prevent default form submission
         event.preventDefault();
 
@@ -20,17 +53,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Play the sound based on the selected genre
         playSound(selectedGenre + '.mp3');
-    });
-
-    // Function to play the sound
-    function playSound(soundFile) {
-        // Create a new audio element
-        var audio = new Audio(soundFile);
-        
-        // Play the audio
-        audio.play();
-
-        // Update the reference to the currently playing audio
-        currentAudio = audio;
     }
+
+    // Get the stop music button element
+    var stopButton = document.getElementById('stopbutton');
+
+    // Add event listener for stop music button click
+    stopButton.addEventListener('click', stopMusic);
 });
