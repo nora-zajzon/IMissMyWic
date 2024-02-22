@@ -7,12 +7,11 @@
 
 /* Body styles */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background: 
-        url('djback.jpeg') center center/cover no-repeat, /* Background image */
-        rgba(0, 0, 0, 0.5); /* Black semi-transparent overlay */
-    color: #333;
+    background-image: url("overlay.png"), url("djback.jpeg");
+    background-repeat: repeat, no-repeat;
+    background-size: auto, cover;
+    background-attachment: fixed;
+    overflow-y: scroll;
 }
 
 /* Header styles */
