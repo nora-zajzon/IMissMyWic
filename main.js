@@ -1,24 +1,34 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Get the form element
-    var form = document.getElementById('djForm');
+    // Get the select element
+    var selectGenre = document.getElementById('genre');
 
-    // Add event listener for form submission
-    form.addEventListener('submit', function(event) {
-        // Prevent default form submission
-        event.preventDefault();
+    // Add event listener for change
+    selectGenre.addEventListener('change', function() {
+        // Get the selected value
+        var selectedGenre = selectGenre.value;
 
-        // Get the selected genre
-        var genre = document.getElementById('genre').value;
-
-        // You can do whatever you want with the genre value here, for example:
-        alert('You selected ' + genre + ' genre!');
+        // Check if the selected value matches the desired option
+        if (selectedGenre === 'house') {
+            // Play the sound for house genre
+            playSound('house-sound.mp3');
+        } else if (selectedGenre === 'rap') {
+            // Play the sound for rap genre
+            playSound('rap-sound.mp3');
+        } else if (selectedGenre === 'pop') {
+            // Play the sound for pop genre
+            playSound('pop-sound.mp3');
+        } else if (selectedGenre === 'indie') {
+            // Play the sound for indie genre
+            playSound('indie-sound.mp3');
+        } else if (selectedGenre === 'EDM') {
+            // Play the sound for EDM genre
+            playSound('edm-sound.mp3');
+        }
     });
 
-    // Get the audio element
-    var audio = document.getElementById('sampleAudio');
-
-    // Add event listener for playing audio
-    audio.addEventListener('play', function() {
-        console.log('Audio is playing');
-    });
+    // Function to play the sound
+    function playSound(soundFile) {
+        var audio = new Audio(soundFile);
+        audio.play();
+    }
 });
