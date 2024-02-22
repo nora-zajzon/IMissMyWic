@@ -7,17 +7,16 @@
 
 /* Body styles */
 body {
-    background-image: url("overlay.png"), url("djback1.jpg");
-    background-repeat: repeat, no-repeat;
+    background-image: url('pink.jpeg'), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
     background-size: auto, cover;
-    background-attachment: fixed;
-    overflow-y: scroll;
-    color: white; /* Text color */
-}
+    background-position: center;
+    background-blend-mode: overlay; /* This blends the two backgrounds */
+    color: white; 
+  }
 
 /* Header styles */
 header {
-    background-color: #000000;
+    background-color: #15001d;
     color: #fff;
     text-align: center;
     padding: 1rem;
@@ -56,7 +55,7 @@ th, td {
 }
 
 th {
-    background-color: #000000;
+    background-color: #270037;
     color: #fff;
 }
 
@@ -84,12 +83,12 @@ button {
 }
 
 button:hover {
-    background-color: #000000;
+    background-color: #270037;
 }
 
 /* Footer styles */
 footer {
-    background-color: #000000;
+    background-color: #270037;
     color: #fff;
     text-align: center;
     padding: 1rem;
@@ -101,7 +100,7 @@ caption {
     font-weight: bold;
     text-align: center;
     padding: 0.5rem;
-    background-color: #000000;
+    background-color: #270037;
     color: #fff;
 }
 
