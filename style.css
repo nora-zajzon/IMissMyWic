@@ -7,11 +7,12 @@
 
 /* Body styles */
 body {
-    background-image: url("overlay.png"), url("djback.jpeg");
+    background-image: url("overlay.png"), url("djback1.jpg");
     background-repeat: repeat, no-repeat;
     background-size: auto, cover;
     background-attachment: fixed;
     overflow-y: scroll;
+    color: white; /* Text color */
 }
 
 /* Header styles */
@@ -30,6 +31,7 @@ main {
 /* Heading styles */
 h1, h2, h3, h4 {
     margin-bottom: 1rem;
+    color: white; /* Text color */
 }
 
 /* Image styles */
@@ -93,6 +95,7 @@ footer {
     padding: 1rem;
 }
 
+/* Table caption styles */
 caption {
     font-size: 1.2rem;
     font-weight: bold;
